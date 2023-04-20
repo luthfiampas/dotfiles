@@ -1,0 +1,74 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 26,
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode",
+        "sway/window"
+    ],
+    "modules-center": [],
+    "modules-right": [
+        "backlight",
+        "pulseaudio",
+        "battery",
+        "clock",
+        "tray"
+    ],
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "disable-markup": true,
+        "format": "{index}"
+    },
+    "sway/window": {
+        "format": "{}",
+        "max-length": 150
+    }, 
+    "tray": {
+        "icon-size": 14,
+        "spacing": 15
+    },
+    "battery": {
+        "bat": "BAT0",
+        "states": {
+            "full": 99,
+            "good": 98,
+            "normal": 98,
+            "warning": 20,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}%",
+        "format-good": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-full": " {capacity}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "interval": 30
+    },
+    "backlight": {
+        "device": "amdgpu_bl0",
+        "format": " {percent}%",
+        "interval": 60
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": " {volume}%",
+        "format-muted": " Mute",
+        "interval": 60,
+        "format-icons": {
+            "default": [
+                ""
+            ]
+        },
+        "on-click": "blueman-manager"
+    },
+    "clock": {
+        "format": "{:%a %b %e %R}",
+        "interval": 30
+    }
+}
