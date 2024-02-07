@@ -55,8 +55,8 @@
         "device": "amdgpu_bl0",
         "format": " {percent}%",
         "interval": 60,
-        "on-scroll-up": "light -A 5",
-        "on-scroll-down": "light -U 5"
+        "on-scroll-up": "lutlight A",
+        "on-scroll-down": "lutlight U"
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",

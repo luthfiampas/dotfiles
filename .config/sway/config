@@ -119,8 +119,8 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
 # Adjust brightness
-bindsym --locked XF86MonBrightnessUp exec light -A 5, exec light -O
-bindsym --locked XF86MonBrightnessDown exec light -U 5, exec light -O
+bindsym --locked XF86MonBrightnessUp exec lutlight A
+bindsym --locked XF86MonBrightnessDown exec lutlight U
 
 # Volume bindings
 bindsym XF86AudioRaiseVolume exec pactl -- set-sink-volume 0 +5%
@@ -281,6 +281,6 @@ workspace number 1
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec systemctl --user import-environment XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP XDG_SESSION_TYPE
 exec --no-startup-id /usr/lib/xdg-desktop-portal -r
-exec light -I
+exec lutlight I
 
 include /etc/sway/config.d/*
