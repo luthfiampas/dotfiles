@@ -19,11 +19,11 @@ int main(int argc, char **argv)
 
     if (strcmp(argv[1], "A") == 0)
     {
-        current_value += 5;
+        current_value += 2;
     }
     else if (strcmp(argv[1], "U") == 0)
     {
-        current_value -= 5;
+        current_value -= 2;
     }
 
     char command[128];
