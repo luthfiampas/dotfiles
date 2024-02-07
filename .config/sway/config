@@ -50,6 +50,9 @@ workspace 8 output $output-secondary
 workspace 9 output $output-secondary
 workspace 10 output $output-secondary
 
+# Enable XWayland
+xwayland enable
+
 
 
 # ----------------------------------------
@@ -81,8 +84,13 @@ input "1267:12736:ASUE120B:00_04F3:31C0_Touchpad" {
     natural_scroll enabled
     middle_emulation enabled
     scroll_factor 0.3
+    pointer_accel 0.3
 }
 
+input "1133:16418:Logitech_Wireless_Mouse_PID:4022" {
+    accel_profile "flat"
+    pointer_accel 0.3
+}
 
 
 # ----------------------------------------
@@ -255,6 +263,9 @@ font pango:monospace 0
 titlebar_padding 1
 titlebar_border_thickness 0
 
+# VS Code opacity
+for_window [app_id="code-url-handler"] opacity 0.95
+
 
 
 # ----------------------------------------
@@ -267,9 +278,9 @@ workspace number 1
 # ----------------------------------------
 # EXECUTE PROGRAMS
 # ----------------------------------------
-exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec systemctl --user import-environment XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP XDG_SESSION_TYPE
+exec --no-startup-id /usr/lib/xdg-desktop-portal -r
 exec light -I
-
-
 
 include /etc/sway/config.d/*
