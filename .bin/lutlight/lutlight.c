@@ -8,9 +8,9 @@ int execute_command(const char *command);
 
 int main(int argc, char **argv)
 {
-    if (argc != 2 || (strcmp(argv[1], "A") != 0 && strcmp(argv[1], "U") != 0))
+    if (argc != 2 || (strcmp(argv[1], "A") != 0 && strcmp(argv[1], "U") != 0 && strcmp(argv[1], "I") != 0))
     {
-        fprintf(stderr, "Error: You must supply a single argument, either 'A' or 'U'.\n");
+        fprintf(stderr, "Error: You must supply a single argument, either 'A' or 'U' or 'I'.\n");
         return 1;
     }
 
