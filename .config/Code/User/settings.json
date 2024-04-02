@@ -19,9 +19,21 @@
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
-                "scope": "keyword.control",
+                "scope": "comment, string",
                 "settings": {
-                    "fontStyle": "bold"
+                    "fontStyle": ""
+                }
+            },
+            {
+                "scope": "keyword",
+                "settings": {
+                    "fontStyle": "bold italic"
+                }
+            },
+            {
+                "scope": "variable.parameter",
+                "settings": {
+                    "fontStyle": "italic"
                 }
             }
         ]
@@ -55,6 +67,7 @@
     "terminal.integrated.fontWeight": 350,
     "terminal.integrated.lineHeight": 1.2,
     "terminal.integrated.persistentSessionReviveProcess": "never",
+    "todo-tree.highlights.useColourScheme": true,
     "typescript.preferences.quoteStyle": "single",
     "update.mode": "manual",
     "update.showReleaseNotes": false,
@@ -65,7 +78,6 @@
     "workbench.colorCustomizations": {
         "editorRuler.foreground": "#37384d"
     },
-    "workbench.colorTheme": "Jetbrains Fleet",
     "workbench.editor.empty.hint": "hidden",
     "workbench.iconTheme": "chalice-icon-theme",
     "workbench.layoutControl.enabled": false,
